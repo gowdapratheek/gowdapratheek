@@ -10,7 +10,7 @@ I'm a Web Developer 💻!
 
 I love the entire process of developing websites. I love spending time to meet new people. Learning how people hide things and where people are likely to look.
 
-### 🤝 Connect with me:
+# 🤝 Connect with me:
 
 <a href="https://www.linkedin.com/in/pratheek-gowda/"><img align="left" src="https://github.com/gowdapratheek/gowdapratheek/blob/main/icons/linkedin.svg" alt="LinkedIn" width="21px"/></a>
 
