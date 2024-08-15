@@ -1,5 +1,8 @@
 import { FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa";
 
+const day = new Date();
+
+
 const Footer = () => {
   return (
     <>
@@ -21,7 +24,8 @@ const Footer = () => {
             </a>
           </div>
           <p className="text-xs">
-            Copyright © 2023 <span className="text-white">Pratheek Gowda </span>
+            Copyright © {day.getFullYear()}{" "}
+            <span className="text-white">Pratheek Gowda </span>
             All Rights Reserved.
           </p>
         </div>
