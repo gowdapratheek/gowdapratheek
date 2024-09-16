@@ -10,11 +10,10 @@ I'm a Web Developer 💻!
 
 I love the entire process of developing websites. I love spending time to meet new people. Learning how people hide things and where people are likely to look.
 
-# 🤝 Connect with me:
 
-<a href="https://www.linkedin.com/in/pratheek-gowda/"><img align="left" src="https://github.com/gowdapratheek/gowdapratheek/blob/main/icons/linkedin.svg" alt="LinkedIn" width="21px"/></a>
+## 🌐 Socials:
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/https://www.instagram.com/pratheek._.gowda_/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/pratheek-gowda/) 
 
-<a href="https://www.instagram.com/pratheek._.gowda_/"><img align="left" src="https://github.com/gowdapratheek/gowdapratheek/blob/main/icons/instagram.svg" alt="Instagram" width="21px"/></a>
 
 </br>
 
@@ -35,7 +34,10 @@ I love the entire process of developing websites. I love spending time to meet n
 
 # 📈 GitHub Stats 
 
-[![Pratheek's github stats](https://github-readme-stats.vercel.app/api?username=gowdapratheek)](https://github.com/gowdapratheek)
-
+![](https://github-readme-stats.vercel.app/api?username=gowdapratheek&theme=dark&hide_border=false&include_all_commits=true&count_private=false)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=gowdapratheek&theme=dark&hide_border=false)<br/>
 
 [![](https://visitcount.itsvg.in/api?id=gowdapratheek&label=Profile%20Views&color=12&icon=5&pretty=true)](https://visitcount.itsvg.in)
+
+  ## 💰 You can help me by Donating
+  [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/hgpratheekgowda) 
