@@ -34,7 +34,7 @@ I love the entire process of developing websites. I love spending time to meet n
 
 # 📈 GitHub Stats 
 
-![](https://github-readme-stats.vercel.app/api?username=gowdapratheek&theme=dark&hide_border=false&include_all_commits=true&count_private=false)<br/>
+![](https://github-readme-stats.vercel.app/api?username=gowdapratheek&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
 ![](https://github-readme-streak-stats.herokuapp.com/?user=gowdapratheek&theme=dark&hide_border=false)<br/>
 
 [![](https://visitcount.itsvg.in/api?id=gowdapratheek&label=Profile%20Views&color=12&icon=5&pretty=true)](https://visitcount.itsvg.in)
