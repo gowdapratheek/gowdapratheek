@@ -1,5 +1,7 @@
+import Icons from "./Icons";
 import { useState } from "react";
-import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -11,12 +13,15 @@ const Header = () => {
   return (
     <>
       <header className="bg-white/0 text-white py-4 backdrop-blur-md fixed w-full z-50">
-        <div className="container mx-auto flex justify-between items-center px-4">
+        <div className="container mx-auto flex justify-between items-center px-8">
           {!navOpen && (
             <span className="font-bold text-xl">
-              <a href="/" className="hover:text-gray-400">
-                Pratheek Gowda
-              </a>
+              <NavLink
+                to="/"
+                className="hover:text-gray-400 chakra  tracking-widest"
+              >
+                HGPG
+              </NavLink>
             </span>
           )}
           <div
@@ -60,84 +65,62 @@ const Header = () => {
                 />
               </svg>
             </div>
-            <nav className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6 items-center justify-center flex-1">
-              <a href="/" className="hover:text-gray-400 text-center">
-                Home
-              </a>
-              <a href="#about" className="hover:text-gray-400 text-center">
-                About
-              </a>
-              <a href="#skills" className="hover:text-gray-400 text-center">
-                Skills
-              </a>
-              <a href="#projects" className="hover:text-gray-400 text-center">
-                Projects
-              </a>
-              <a href="#blogs" className="hover:text-gray-400 text-center">
-                Blogs
-              </a>
-              <a href="#contact" className="hover:text-gray-400 text-center">
-                Contact
-              </a>
-              <a
-                href="#resume"
-                className="border border-[#2e99cd] text-[#2e99cd] px-4 py-2 rounded hover:bg-[#2e99cd] hover:text-white"
+            <nav className="flex flex-col lg:flex-row space-y-7 lg:space-y-0 lg:space-x-6 flex-1 text-2xl md:text-xl">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "text-gray-400" : ""
+                  } hover:text-gray-400 text-center`
+                }
+                onClick={toggleNav}
               >
-                Resume
-              </a>
-              <div className="flex lg:hidden items-center justify-center w-full space-x-6  mb-4">
-                <a
-                  href="https://www.linkedin.com/in/pratheek-gowda/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-gray-400 text-xl"
-                >
-                  <FaLinkedin />
-                </a>
-                <a
-                  href="https://www.instagram.com/pratheek._.gowda_/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-gray-400 text-xl"
-                >
-                  <FaInstagram />
-                </a>
-                <a
-                  href="https://github.com/gowdapratheek"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-gray-400 text-xl"
-                >
-                  <FaGithub />
-                </a>
+                Home
+              </NavLink>
+              <NavLink
+                to="skills"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "text-gray-400" : ""
+                  } hover:text-gray-400 text-center`
+                }
+                onClick={toggleNav}
+              >
+                Skills
+              </NavLink>
+              <NavLink
+                to="projects"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "text-gray-400" : ""
+                  } hover:text-gray-400 text-center`
+                }
+                onClick={toggleNav}
+              >
+                Projects
+              </NavLink>
+              <NavLink
+                to="blogs"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "text-gray-400" : ""
+                  } hover:text-gray-400 text-center`
+                }
+                onClick={toggleNav}
+              >
+                Blogs
+              </NavLink>
+
+              <div
+                className="flex lg:hidden items-center justify-center w-full space-x-6  mb-4 "
+                onClick={toggleNav}
+              >
+                <Icons />
               </div>
             </nav>
           </div>
           <div className="hidden lg:flex lg:flex-row space-x-6 items-center justify-center">
-            <a
-              href="https://www.linkedin.com/in/pratheek-gowda/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-400 text-xl"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://www.instagram.com/pratheek._.gowda_/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-400 text-xl"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://github.com/gowdapratheek"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-400 text-xl"
-            >
-              <FaGithub />
-            </a>
+            <Icons />
           </div>
         </div>
       </header>
