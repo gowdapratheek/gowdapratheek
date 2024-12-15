@@ -1,6 +1,7 @@
 import { ReactTyped } from "react-typed";
 import Skills from "./Skills.jsx";
 import Projects from "./Projects.jsx";
+import Contact from "./Contact.jsx";
 
 function Home() {
   return (
@@ -41,6 +42,7 @@ function Home() {
       </div>
       <Skills />
       <Projects />
+      <Contact />
     </>
   );
 }

@@ -19,6 +19,15 @@ const projects = [
     codeLink: "https://github.com/gowdapratheek/druthi-construction",
     technologies: ["React", "Tailwind CSS", "Blurhash"],
   },
+  {
+    title: "https://theitdistrict.com/",
+    description:
+      "Team of highly skilled professionals dedicated to providing innovative and reliable technology solutions to businesses of all sizes.",
+    demoPhoto: "/itdistrict",
+    demoLink: "https://theitdistrict.com/",
+    codeLink: "https://github.com/gowdapratheek/itDistrict",
+    technologies: ["React", "Tailwind CSS"],
+  },
 ];
 
 // function getScreenshotURL(url) {
@@ -29,7 +38,7 @@ const projects = [
 
 function Projects() {
   return (
-    <div className="pt-[10vh] px-5 text-gray-100 min-h-screen">
+    <div className="pt-[10vh] px-5 text-gray-100 ">
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8">
         Projects
       </h2>
