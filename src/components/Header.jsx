@@ -2,7 +2,6 @@ import Icons from "./Icons";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
@@ -14,16 +13,17 @@ const Header = () => {
     <>
       <header className="bg-white/0 text-white py-4 backdrop-blur-md fixed w-full z-50">
         <div className="container mx-auto flex justify-between items-center px-8">
-          {!navOpen && (
-            <span className="font-bold text-xl">
-              <NavLink
-                to="/"
-                className="hover:text-gray-400 chakra  tracking-widest"
-              >
-                HGPG
-              </NavLink>
-            </span>
-          )}
+          {/* Always display HGPG */}
+          <span className="font-bold text-xl">
+            <NavLink
+              to="/"
+              className="hover:text-gray-400 chakra tracking-widest"
+            >
+              HGPG
+            </NavLink>
+          </span>
+
+          {/* Hamburger Menu for Mobile */}
           <div
             className={`flex lg:hidden items-center ${
               navOpen ? "h-screen" : ""
@@ -44,6 +44,8 @@ const Header = () => {
               />
             </svg>
           </div>
+
+          {/* Navigation Links */}
           <div
             className={`lg:flex flex-col lg:flex-row items-center lg:space-x-8 ${
               navOpen ? "flex" : "hidden"
@@ -78,7 +80,7 @@ const Header = () => {
                 Home
               </NavLink>
               <NavLink
-                to="skills"
+                to="/skills"
                 className={({ isActive }) =>
                   `${
                     isActive ? "text-gray-400" : ""
@@ -89,7 +91,7 @@ const Header = () => {
                 Skills
               </NavLink>
               <NavLink
-                to="projects"
+                to="/projects"
                 className={({ isActive }) =>
                   `${
                     isActive ? "text-gray-400" : ""
@@ -100,7 +102,7 @@ const Header = () => {
                 Projects
               </NavLink>
               <NavLink
-                to="blogs"
+                to="/blogs"
                 className={({ isActive }) =>
                   `${
                     isActive ? "text-gray-400" : ""
@@ -110,15 +112,28 @@ const Header = () => {
               >
                 Blogs
               </NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "text-gray-400" : ""
+                  } hover:text-gray-400 text-center`
+                }
+                onClick={toggleNav}
+              >
+                Contact
+              </NavLink>
 
               <div
-                className="flex lg:hidden items-center justify-center w-full space-x-6  mb-4 "
+                className="flex lg:hidden items-center justify-center w-full space-x-6 mb-4"
                 onClick={toggleNav}
               >
                 <Icons />
               </div>
             </nav>
           </div>
+
+          {/* Social Icons for Larger Screens */}
           <div className="hidden lg:flex lg:flex-row space-x-6 items-center justify-center">
             <Icons />
           </div>

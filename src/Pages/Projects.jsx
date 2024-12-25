@@ -20,91 +20,97 @@ const projects = [
     technologies: ["React", "Tailwind CSS", "Blurhash"],
   },
   {
-    title: "https://theitdistrict.com/",
+    title: "TheitDistrict",
     description:
       "Team of highly skilled professionals dedicated to providing innovative and reliable technology solutions to businesses of all sizes.",
-    demoPhoto: "/itdistrict",
+    demoPhoto: "/itdistrict.png",
     demoLink: "https://theitdistrict.com/",
     codeLink: "https://github.com/gowdapratheek/itDistrict",
     technologies: ["React", "Tailwind CSS"],
   },
 ];
 
-// function getScreenshotURL(url) {
-//   return `https://api.screenshotone.com/take?url=${encodeURIComponent(
-//     url
-//   )}&access_key=${import.meta.env.VITE_API_KEY}`;
-// }
-
 function Projects() {
   return (
-    <div className="pt-[10vh] px-5 text-gray-100 ">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8">
-        Projects
-      </h2>
+    <div className="pt-[10vh] px-5 text-gray-100">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 relative inline-block">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+              Projects
+            </span>
+          </h2>
+        </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="relative bg-gray-800 shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105"
-          >
-            <img
-              src={project.demoPhoto}
-              alt={project.title}
-              className="w-full object-cover"
-              loading="lazy"
-            />
-
-            <div className="absolute inset-0 flex flex-col justify-end">
-              <div className="p-4 bg-gradient-to-t from-black via-black/70 to-transparent">
-                <h3 className="text-xl font-semibold text-white">
-                  {project.title}
-                </h3>
-                <p className="text-gray-400 text-sm">{project.description}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="group relative bg-gray-800/90 shadow-xl rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
+            >
+              <div className="relative  overflow-hidden">
+                <img
+                  src={project.demoPhoto}
+                  alt={project.title}
+                  className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
               </div>
-            </div>
 
-            <div className="absolute inset-0 flex flex-col justify-end opacity-0 hover:opacity-100 bg-gray-900 bg-opacity-90 transition-opacity duration-300">
-              <div className="p-4 space-y-4">
-                <h3 className="text-xl font-semibold text-white">
-                  {project.title}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, i) => (
-                    <div
-                      key={i}
-                      className="inline-flex items-center rounded-md text-gray-300 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent border border-gray-500 hover:bg-secondary/80 px-2 py-1 text-xs"
+              <div className="absolute inset-0 flex flex-col justify-end">
+                <div className="p-4 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent">
+                  <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm line-clamp-2">
+                    {project.description}
+                  </p>
+                </div>
+              </div>
+
+              <div className="absolute inset-0 flex flex-col justify-end opacity-0 group-hover:opacity-100 bg-gradient-to-t from-gray-900 via-gray-900/95 to-transparent transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="p-6 space-y-4">
+                  <h3 className="text-xl font-semibold text-white">
+                    {project.title}
+                  </h3>
+
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, i) => (
+                      <div
+                        key={i}
+                        className="inline-flex items-center rounded-full text-gray-300 font-medium border border-gray-700 px-3 py-1 text-xs backdrop-blur-sm hover:bg-gray-700/50 transition-colors"
+                      >
+                        {tech}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-col space-y-3">
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-x-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-4 py-2 rounded-md text-sm text-white transition-all duration-300"
                     >
-                      {tech}
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex flex-col space-y-4">
-                  <a
-                    href={project.demoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-x-2 bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-md text-sm text-white"
-                  >
-                    <HiExternalLink className="text-lg" />
-                    <span>Live Demo</span>
-                  </a>
-                  <a
-                    href={project.codeLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-x-2 border border-gray-700 hover:bg-gray-600 px-4 py-2 rounded-md text-sm text-white"
-                  >
-                    <HiCode className="text-lg" />
-                    <span>View Code</span>
-                  </a>
+                      <HiExternalLink className="text-lg" />
+                      <span>Live Demo</span>
+                    </a>
+                    <a
+                      href={project.codeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-x-2 border border-gray-600 hover:border-blue-500 hover:text-blue-400 px-4 py-2 rounded-md text-sm text-white transition-all duration-300"
+                    >
+                      <HiCode className="text-lg" />
+                      <span>View Code</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

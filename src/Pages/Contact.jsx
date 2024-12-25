@@ -34,7 +34,11 @@ function ContactForm() {
   return (
     <div className="pt-[10vh]">
       <div className="max-w-md mx-auto p-6 rounded-lg shadow-lg">
-        <h2 className="text-2xl font-semibold text-center mb-6">Contact</h2>
+        <h2 className="text-4xl font-semibold text-center mb-6">
+          <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+            Contact
+          </span>
+        </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <input
