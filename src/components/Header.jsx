@@ -17,7 +17,9 @@ const Header = () => {
           <span className="font-bold text-xl">
             <NavLink
               to="/"
-              className="hover:text-gray-400 chakra tracking-widest"
+              className={`hover:text-gray-400 chakra tracking-widest ${
+                navOpen ? " hidden lg:block" : ""
+              }`}
             >
               HGPG
             </NavLink>
@@ -102,7 +104,7 @@ const Header = () => {
                 Projects
               </NavLink>
               <NavLink
-                to="/blogs"
+                to="/blog"
                 className={({ isActive }) =>
                   `${
                     isActive ? "text-gray-400" : ""
@@ -113,7 +115,7 @@ const Header = () => {
                 Blogs
               </NavLink>
               <NavLink
-                to="/contact"
+                to="/newsletter"
                 className={({ isActive }) =>
                   `${
                     isActive ? "text-gray-400" : ""
@@ -121,7 +123,7 @@ const Header = () => {
                 }
                 onClick={toggleNav}
               >
-                Contact
+                Newsletter
               </NavLink>
 
               <div

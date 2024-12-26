@@ -26,16 +26,25 @@ const projects = [
     demoPhoto: "/itdistrict.png",
     demoLink: "https://theitdistrict.com/",
     codeLink: "https://github.com/gowdapratheek/itDistrict",
-    technologies: ["React", "Tailwind CSS"],
+    technologies: ["React", "Tailwind CSS", "Sheets"],
+  },
+  {
+    title: "HMT Constructions",
+    description:
+      "Having a vision but no execution? Get expert advice, innovative designs, and proven solutions to bring your construction projects to life with quality and trust.",
+    demoPhoto: "/hmt.png",
+    demoLink: "https://hmtconstructions.com/",
+    codeLink: "https://github.com/gowdapratheek/hmt",
+    technologies: ["React", "Tailwind CSS", "Emailjs"],
   },
 ];
 
 function Projects() {
   return (
-    <div className="pt-[10vh] px-5 text-gray-100">
+    <div className=" px-2 text-gray-100">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 relative inline-block">
+          <h2 className="text-4xl font-bold mb-4 relative inline-block">
             <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
               Projects
             </span>
@@ -46,7 +55,7 @@ function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative bg-gray-800/90 shadow-xl rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
+              className="group relative bg-gray-800/90 shadow-xl rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20 shadow-blue-500/10"
             >
               <div className="relative  overflow-hidden">
                 <img
@@ -60,7 +69,7 @@ function Projects() {
 
               <div className="absolute inset-0 flex flex-col justify-end">
                 <div className="p-4 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent">
-                  <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-gray-400 text-sm line-clamp-2">
@@ -79,7 +88,7 @@ function Projects() {
                     {project.technologies.map((tech, i) => (
                       <div
                         key={i}
-                        className="inline-flex items-center rounded-full text-gray-300 font-medium border border-gray-700 px-3 py-1 text-xs backdrop-blur-sm hover:bg-gray-700/50 transition-colors"
+                        className="inline-flex items-center rounded-md text-gray-300 font-medium border border-gray-700 px-3 py-1 text-xs backdrop-blur-sm hover:bg-gray-700/50 transition-colors"
                       >
                         {tech}
                       </div>
@@ -91,7 +100,7 @@ function Projects() {
                       href={project.demoLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-x-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-4 py-2 rounded-md text-sm text-white transition-all duration-300"
+                      className="flex items-center justify-center gap-x-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-4 py-2 rounded-md text-sm transition-all duration-300"
                     >
                       <HiExternalLink className="text-lg" />
                       <span>Live Demo</span>
@@ -100,7 +109,7 @@ function Projects() {
                       href={project.codeLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-x-2 border border-gray-600 hover:border-blue-500 hover:text-blue-400 px-4 py-2 rounded-md text-sm text-white transition-all duration-300"
+                      className="flex items-center justify-center gap-x-2 border border-gray-600 hover:border-blue-500 hover:text-blue-400 px-4 py-2 rounded-md text-sm transition-all duration-300"
                     >
                       <HiCode className="text-lg" />
                       <span>View Code</span>
