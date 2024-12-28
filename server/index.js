@@ -9,12 +9,7 @@ import blogRouter from "./routes/blog.js";
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(
-  cors({
-    origin: ["http://172.20.10.2:5173", "http://localhost:5173"],
-    credentials: true,
-  })
-);
+app.use(cors());
 
 app.use("/", newsletterRouter);
 app.use("/api/blogs", blogRouter);
